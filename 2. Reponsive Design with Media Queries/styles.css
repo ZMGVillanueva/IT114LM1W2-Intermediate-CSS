@@ -22,6 +22,15 @@ a different color when the screen is smaller than 500px*/
   background-color: red;
 }
 
+@media only screen and (min-width: 500px)
+{
+  .change-color
+  {
+    background-color: blue;
+  }
+}
+
+
 /* Todo 2.1: Define and apply CSS styles such that the layout of .change-layout becomes a column
 when the screen's width is smaller than 500px */
 .change-layout {
@@ -36,4 +45,52 @@ For each break point, the background of .common-breakpoints must change. You may
   width: 100%;
   height: 300px;
   background-color: blue;
+}
+
+@media only screen and (min-width: 150px)
+{
+  .common-breakpoints
+  {
+    background-color: orangered;
+  }
+}
+
+@media only screen and (min-width: 300px)
+{
+  .common-breakpoints
+  {
+    background-color: orange;
+  }
+}
+
+@media only screen and (min-width: 640px)
+{
+  .common-breakpoints
+  {
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 768px)
+{
+  .common-breakpoints
+  {
+    background-color: green;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+{
+  .common-breakpoints
+  {
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 1280px)
+{
+  .common-breakpoints
+  {
+    background-color: violet;
+  }
 }

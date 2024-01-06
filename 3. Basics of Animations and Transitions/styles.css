@@ -1,5 +1,6 @@
 
-.box {
+.box
+{
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -12,24 +13,99 @@
 }
 
 /* Todo 3.0: Create an animation that increases and decreases the scale of the box  */
-.todo-0-container .box{
-    /* Apply animation here */
+.todo-0-container .box
+{
+    animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation 
+{
+    0%
+    {
+        transform: scale(1);
+    }
+
+    50%
+    {
+        transform: scale(1.2);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
 }
 
 /* Todo 3.1: Create an animation that moves the box left and right.
 Start with using "from" and "to". Now use "0%" and "100%" as your key frames.
 Set more key frames between 0% and 100%. */
-.todo-1-container .box{
-    /* Apply animation here */
+.todo-1-container .box
+{
+    animation: moveAnimation 2s infinite;
+}
+
+@keyframes moveAnimation 
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+
+    25%
+    {
+        transform: translateX(50px);
+    }
+
+    50%
+    {
+        transform: translateX(0);
+    }
+
+    75%
+    {
+        transform: translateX(-50px);
+    }
+
+    100%
+    {
+        transform: translateX(0);
+    }
+    
 }
 
 /* Todo 3.2: Try the different timing funcitons such as linear, ease-in, ease-in-out, cubic-bezier, and steps*/
-.todo-2-container .box{
-    /* Apply animation here */
+.todo-2-container .box
+{
+    animation: timingFunctionAnimation 2s infinite;
+}
+
+@keyframes timingFunctionAnimation
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+
+    50%
+    {
+        transform: translateX(50px);
+    }
+
+    100%
+    {
+        transform: translateX(0);
+    }
 }
 
 /* Todo 3.3: Create a transition that will raise the button up and will make it cast a shadow when you hover over the button */
 /* bonus: apply the transition on the box shadow with different duration and timing function. This should all be in one line*/
-.todo-3-container button{
-    /* Apply transition here */
+.todo-3-container button
+{
+    transition: transform 300ms ease-in-out 0s, box-shadow 600ms linear;
+}
+
+.todo-3-container button:hover
+{
+    transform: scale(1.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
